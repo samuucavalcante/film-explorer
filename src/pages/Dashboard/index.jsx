@@ -6,7 +6,7 @@ import { Container, Search, List } from './styles';
 import Input from '../../components/Input';
 
 
-
+ 
 const Dashboard = () => {
   const [input, setInput] = useState('');
   const [filmes, setFilmes] = useState([])
@@ -54,7 +54,7 @@ const Dashboard = () => {
           .map(film => (
             <li key={film.imdbID} >
               <div className="wrap-img">
-                <img src={film.Poster} alt="This film has no image" />
+                <img src={film.Poster} alt="This film has no imagem" />
               </div>
               <div className="wrap-description">
                 <h3>{film.Title}</h3>
