@@ -55,7 +55,7 @@ export const List = styled.ul`
 
       }
     }
-    .wrap-image{
+    .wrap-img{
       width: 50%;
        img {
         width: 100%;

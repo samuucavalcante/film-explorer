@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useEffect } from 'react';
 
 import { Container, Search, List } from './styles';
@@ -40,7 +41,7 @@ const Dashboard = () => {
   return (
     <Container>
       <h1>Film Explorer</h1>
-      <Search>
+      <Search> 
         <Input
           onChange={e => setInput(e.target.value)}
           placeholder="Type some movie"
@@ -52,7 +53,7 @@ const Dashboard = () => {
         })
           .map(film => (
             <li key={film.imdbID} >
-              <div className="wrap-image">
+              <div className="wrap-img">
                 <img src={film.Poster} alt="This film has no image" />
               </div>
               <div className="wrap-description">
