@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useEffect } from 'react';
 
 import { Container, Search, List } from './styles';
@@ -16,7 +15,7 @@ const Dashboard = () => {
       try {
         
         const inputConfig = input.trim()
-        const response = await fetch(`http://www.omdbapi.com/?apikey=938c5de9&s="${inputConfig}"`)
+        const response = await fetch(`https://www.omdbapi.com/?apikey=938c5de9&s="${inputConfig}"`)
         const data = await response.json()
         if (!response) {
           setFilmes([])
