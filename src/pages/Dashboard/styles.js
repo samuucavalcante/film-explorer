@@ -14,6 +14,29 @@ from {
 
 
 export const Container = styled.div`
+
+html {
+    ::-webkit-scrollbar {
+  width:7px;
+  height: 7px;
+}
+ 
+::-webkit-scrollbar-track {
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #ff6d6d;
+
+}
+overflow-y: auto;
+
+  }
+
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;

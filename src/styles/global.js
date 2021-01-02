@@ -7,12 +7,11 @@ export default createGlobalStyle`
   outline: none;
   box-sizing: border-box;
 
- 
-
-
 }
 
   html {
+    
+
     ::-webkit-scrollbar {
   width:7px;
   height: 7px;
