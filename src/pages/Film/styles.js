@@ -42,14 +42,15 @@ export const FilmInfo = styled.section`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;    
-  }
+    padding: 0px 20px;
+      }
   header {
     display: flex;
     align-items: center;
 
     img {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       
     }
