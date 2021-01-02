@@ -61,6 +61,8 @@ export const List = styled.ul`
   
   padding: 0 60px;
 
+  margin-bottom: 10px;
+
   flex-wrap: wrap;
   flex: 1;
 
