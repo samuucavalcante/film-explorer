@@ -6,8 +6,34 @@ export default createGlobalStyle`
   padding: 0;
   outline: none;
   box-sizing: border-box;
-  overflow: hidden;
+
+ 
+
+
 }
+
+  html {
+    ::-webkit-scrollbar {
+  width:7px;
+  height: 7px;
+}
+ 
+::-webkit-scrollbar-track {
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #ff6d6d;
+
+}
+overflow-y: auto;
+
+  }
+
 body {
   background: #F0F2F5;
   color: #1C1E21;

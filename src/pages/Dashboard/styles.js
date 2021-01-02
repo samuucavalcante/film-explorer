@@ -23,27 +23,6 @@ export const Container = styled.div`
     margin-left: 17px;
   }
 
-::-webkit-scrollbar {
-  width:8px;
-  height: 8px;
-}
- 
-::-webkit-scrollbar-track {
-  background:rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  margin-top: 125px;
-  margin-bottom: 40px;
-
-}
- 
-
-::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background: #ff6d6d;
-
-}
-overflow-y: auto;
-
 
 `;
 
@@ -59,16 +38,14 @@ export const List = styled.ul`
   display: flex;
   justify-content: space-around;
   
-  padding: 0 60px;
+  padding: 10px 60px;
 
-  margin-bottom: 10px;
 
   flex-wrap: wrap;
   flex: 1;
 
 
   a {
-    margin-right: 12px;
     background-color: white;
     width: 290px;
     margin-top: 15px;
