@@ -4,8 +4,10 @@ import { Container, Search, List } from './styles';
 
 import Input from '../../components/Input';
 
+import { Link } from 'react-router-dom';
 
- 
+
+
 const Dashboard = () => {
   const [input, setInput] = useState('');
   const [filmes, setFilmes] = useState([])
@@ -13,7 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     async function date() {
       try {
-        
+
         const inputConfig = input.trim()
         const response = await fetch(`https://www.omdbapi.com/?apikey=938c5de9&s="${inputConfig}"`)
         const data = await response.json()
@@ -27,7 +29,7 @@ const Dashboard = () => {
       }
       catch (err) {
         setFilmes([])
-        
+
         return 0;
       }
 
@@ -40,7 +42,7 @@ const Dashboard = () => {
   return (
     <Container>
       <h1>Film Explorer</h1>
-      <Search> 
+      <Search>
         <Input
           onChange={e => setInput(e.target.value)}
           placeholder="Type some movie"
@@ -52,14 +54,16 @@ const Dashboard = () => {
         })
           .map(film => (
             <li key={film.imdbID} >
-              <div className="wrap-img">
-                <img src={film.Poster} alt="This film has no imagem" />
-              </div>
-              <div className="wrap-description">
-                <h3>{film.Title}</h3>
-                <p>{film.Year}</p>
-                <span>{film.Type}</span>
-              </div>
+              <Link to={`film/${film.Title}`}>
+                <div className="wrap-img">
+                  <img src={film.Poster} alt="This film has no imagem" />
+                </div>
+                <div className="wrap-description">
+                  <h3 href="/" >{film.Title}</h3>
+                  <p>{film.Year}</p>
+                  <span>{film.Type}</span>
+                </div>
+              </Link>
             </li>
           ))}
       </List>

@@ -1,13 +1,16 @@
 import React from 'react';
 
-import Dashboard from './pages/Dashboard';
-// import Film from './pages/Film'
- 
+import { BrowserRouter } from 'react-router-dom';
+
+import Route from './routes';
+
 import GlobalStyles from './styles/global';
 
 const App = () => (
   <>
-    <Dashboard /> 
+    <BrowserRouter>
+      <Route />
+    </BrowserRouter>
     <GlobalStyles />
   </>
 )

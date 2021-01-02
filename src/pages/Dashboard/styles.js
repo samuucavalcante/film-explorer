@@ -23,7 +23,8 @@ export const List = styled.ul`
   flex: 1;
   justify-content: space-around;
   flex-wrap: wrap;
-  li {
+ 
+  a {
     width: 280px;
 
     border-radius: 5px;
@@ -57,9 +58,12 @@ export const List = styled.ul`
     }
     .wrap-img{
       width: 50%;
+      height: 210px;
        img {
         width: 100%;
         height: 100%;
+        color: red;
+        font-size: 14px;
       }
     }
 
