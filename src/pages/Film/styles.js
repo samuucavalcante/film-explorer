@@ -6,6 +6,7 @@ export const Container = styled.div`
   margin: 0 auto;
   border-radius: 5px;
 
+
 `;
 
 export const Header = styled.header`
@@ -13,10 +14,7 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   max-width: 800px;
-  h1 {
-    margin-left: 16px;
-  }
-
+  
   a { 
     display: flex;
     align-items: center;
@@ -49,9 +47,7 @@ export const FilmInfo = styled.section`
     align-items: center;
 
     img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+      width: 200px;
       
     }
 
