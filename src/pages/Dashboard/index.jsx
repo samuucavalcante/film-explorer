@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Container, Search, List } from './styles';
+import { Container, Search, List, Popular } from './styles';
 
 import Input from '../../components/Input';
 
@@ -11,11 +11,14 @@ import { Link } from 'react-router-dom';
 const Dashboard = () => {
   const [input, setInput] = useState('');
   const [filmes, setFilmes] = useState([])
+  const [popular, setPopular] = useState(true);
 
   useEffect(() => {
     async function date() {
       try {
-
+        if(setFilmes([]) ) {
+          setPopular(false)
+        }
         const inputConfig = input.trim()
         const response = await fetch(`https://www.omdbapi.com/?apikey=938c5de9&s="${inputConfig}"`)
         const data = await response.json()
@@ -66,6 +69,24 @@ const Dashboard = () => {
               </Link>
             </li>
           ))}
+        {popular && (
+          <Popular>
+            <h1>Filmes Populares</h1>
+            <li >
+              <Link to={""}>
+                <div className="wrap-img">
+                  <img src="" alt="This film has no imagem" />
+                </div>
+                <div className="wrap-description">
+                  <h3 href="/" >{}</h3>
+                  <p>{}</p>
+                  <span>{}</span>
+                </div>
+              </Link>
+            </li>
+          </Popular>
+        )}
+
       </List>
 
 

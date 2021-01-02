@@ -15,6 +15,7 @@ const Film = () => {
       return response.json()
     }).then(data => {
       setFilme([data]);
+      console.log(data)
     })
   }, [params.filmid])
 

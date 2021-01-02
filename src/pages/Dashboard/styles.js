@@ -71,3 +71,7 @@ export const List = styled.ul`
 
 `;
 
+export const Popular = styled.div`
+text-align: end;
+`;
+
