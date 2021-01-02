@@ -8,6 +8,7 @@ export const Container = styled.div`
   padding: 16px;
   width: 100%;
   color: #f4ede8;
+  
   &::placeholder {
     color: #666360;
   }

@@ -1,38 +1,87 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+import { shade } from 'polished';
+
+const key = keyframes`
+from {
+  opacity: 0;
+  transform: translateX(-5px)
+}to {
+  opacity: 1;
+  transform: translateX(0px)
+}
+`;
+
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   height: 100vh;
   border-radius: 5px;
   h1 {
     margin-left: 17px;
   }
+
+::-webkit-scrollbar {
+  width:8px;
+  height: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-top: 125px;
+  margin-bottom: 40px;
+
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #ff6d6d;
+
+}
+overflow-y: auto;
+
+
 `;
 
 export const Search = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2px  17px;
+  margin: 20px;
 `;
+
 
 export const List = styled.ul`
   display: flex;
-  flex: 1;
   justify-content: space-around;
-  flex-wrap: wrap;
- 
-  a {
-    width: 280px;
+  
+  padding: 0 60px;
 
+  flex-wrap: wrap;
+  flex: 1;
+
+
+  a {
+    margin-right: 12px;
+    background-color: white;
+    width: 290px;
+    margin-top: 15px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
-    margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    animation: ${key} 1s;
+
+    
+
+    &:hover {
+      background-color: ${shade(0.2, 'white')};
+      color: ${shade(0.2, 'black')};
+    }
     div {
       flex: 1;
       display: flex;
